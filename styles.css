@@ -1,0 +1,172 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header img {
+    height: 30px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 10px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.about-btn:hover, .contact-btn:hover {
+    background-color: #008000;
+    color: white;
+}
+
+.advertiser-btn {
+    background-color: #008000;
+    color: white;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    background-image: url('public/Top-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.hero-content {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 20px;
+}
+
+/* Opportunities Section */
+.opportunities {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.opportunities h2 {
+    font-size: 2.5rem;
+}
+
+.opportunities span {
+    font-weight: bold;
+    color: #008000;
+}
+
+/* Store Owner and Advertise Section */
+.store-owner, .advertise {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.store-content, .advertise-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+
+.store-content img, .advertise-content img {
+    max-width: 700px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.store-content .text, .advertise-content .text {
+    max-width: 400px;
+}
+
+.store-content .text h3, .advertise-content .text h3 {
+    color: #1252AE;
+    font-size: 2.2rem;
+}
+
+.store-content .text p, .advertise-content .text p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.store-content .text .btn, .advertise-content .text .btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #008000;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Advertise Section */
+.advertise-content .text {
+    order: 1;
+}
+
+.advertise-content img {
+    order: 2;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero-content {
+        font-size: 2rem;
+    }
+
+    .opportunities h2 {
+        font-size: 2rem;
+    }
+
+    .store-content, .advertise-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .store-content img, .advertise-content img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .store-content .text, .advertise-content .text {
+        max-width: none;
+    }
+}
